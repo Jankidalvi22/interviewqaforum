@@ -1,0 +1,18 @@
+<div [hidden]="submitted" style="width: 400px; margin-top: 100px;">
+    <form (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="name">Comments Id</label>
+        <input type="text" class="form-control" id="commentsId" required [(ngModel)]="comment.commentsId" name="commentsId">
+  
+        <label for="name">Comments Content</label>
+        <input type="text" class="form-control" id="content" required [(ngModel)]="comment.contents" name="content">
+      </div>
+  
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+  
+  <div [hidden]="!submitted"  style="margin-top: 300px; border: solid black 2px;   background: #3E8DA8; text-align: center; margin-left: 60px; margin-right: 60px; color: white;">
+    <h4 style="margin-top: 100px;">Comment added successfully!</h4>
+    <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+  </div>
